@@ -617,8 +617,4 @@ function takeNearest(data, lat, lng, radius) {
 ```javascript
 const API_BASE_URL = 'https://waste-api-6xd9.onrender.com';
 ```
-
-### 배포 정보
-- **프론트엔드 배포 주소**: [https://0bini.github.io/my-recycling-project/main.html](https://0bini.github.io/my-recycling-project/main.html)
-
 ---
