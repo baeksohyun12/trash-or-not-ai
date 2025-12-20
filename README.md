@@ -19,6 +19,7 @@ API 문서(Swagger): https://waste-api-6xd9.onrender.com/docs
 AI 모델 가동 상태: 정상 (MobileNetV3 Large 기반)
 
 프로젝트 소개 (Backend)
+
 "버릴까 말까" 서비스의 핵심 두뇌 역할을 담당합니다. 업로드된 이미지를 실시간으로 분석하는 고성능 AI 추론 엔진을 탑재하고 있으며, 대용량 위치 데이터를 효율적으로 처리하여 사용자에게 가장 가까운 분리수거 정보를 제공합니다.
 
 주요 역할
@@ -39,7 +40,9 @@ DevOps & Tools
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">
 
 핵심 백엔드 아키텍처
+
 1. 실시간 AI 추론 파이프라인 (MobileNetV3)
+
 사용자가 업로드한 고해상도 이미지를 서버 메모리에서 즉시 처리하여 분석 결과를 반환합니다.
 
 전처리 시스템: Resize(256) 및 CenterCrop(224)을 적용하여 스마트폰 사진의 비율 왜곡을 방지하고 분석 정확도를 극대화했습니다.
@@ -47,6 +50,7 @@ DevOps & Tools
 추론 최적화: eval() 모드와 torch.no_grad()를 사용하여 불필요한 연산을 제거하고 응답 속도를 향상시켰습니다.
 
 2. 강력한 이미지 유효성 검증
+
 악의적인 요청이나 대용량 파일로부터 서버를 보호하기 위해 다중 보안 계층을 구축했습니다.
 
 MIME Type 검사: ALLOWED_EXTENSIONS를 정의하여 JPG, PNG, WEBP 등 허용된 이미지 포맷만 통과시킵니다.
