@@ -135,18 +135,50 @@ app/                        # 백엔드 애플리케이션 메인 패키지
 └── requirements.txt            # 프로젝트 실행을 위한 라이브러리 목록
 ```
 
-## 설치 및 실행 방법
+## 환경 정보
 
+### 🛠 Backend Environment & Requirements
+백엔드 서버 가동 및 AI 모델 추론을 위해 아래의 환경 설정이 필요합니다.
 * 환경 설정: **Python 3.9+** 환경이 필요합니다.
-
-* 필수 라이브러리 설치: **Bash**
-
-  ```bash
-  pip install fastapi uvicorn torch torchvision pillow python-multipart
-  ```
+  
 * 서버 실행
 
   ```bash
   uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
   ```
+
+1. 소프트웨어 사양 (Software Requirements)
+Language: Python 3.9 이상 (MobileNetV3 및 PyTorch 호환성 권장 버전)
+
+* Framework: FastAPI
+
+* ASGI Server: Uvicorn
+
+* AI Engine: PyTorch, Torchvision
+
+2. 필수 라이브러리 (Dependencies)
+프로젝트 루트의 requirements.txt를 통해 아래 라이브러리들이 설치되어야 합니다.
+
+  ```bash
+  pip install fastapi uvicorn torch torchvision pillow python-multipart
+  ```
+
+3. 모델 데이터 경로 설정 (Path Configuration)
+AI 모델이 정상적으로 로드되려면 프로젝트 구조 내에 아래 파일들이 지정된 위치에 있어야 합니다.
+
+* 가중치 파일: model_data/best_waste_model.pth
+
+* 클래스 정의: model_data/classes.txt
+
+Note: ai_model.py 내부에서 os.path를 통해 자동 경로 탐색을 수행하지만, 실행 시 해당 폴더가 누락되지 않도록 주의해야 합니다.
+
+4. 하드웨어 설정 (Hardware Setting)
+Device: GPU(CUDA) 사용이 가능할 경우 자동으로 GPU를 활용하며, 불가할 경우 CPU로 추론을 수행합니다.
+
+5. 주요 환경 변수 및 제약 조건
+CORS: 현재 모든 Origin(*)에 대해 허용 설정되어 있습니다.
+
+Max Upload Size: 최대 이미지 업로드 용량은 10MB로 제한되어 있습니다.
+
+
 
