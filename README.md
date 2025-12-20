@@ -65,7 +65,7 @@ AI 분석 시 프론트엔드 아이콘 매핑을 고려하여 Scrap → Can, PE
 Response 예시:
 
 JSON
-
+```
 {
   "category": "Can",
   "is_dirty": false,
@@ -74,7 +74,7 @@ JSON
 }
 
 프로젝트 구조 (Backend)
-
+```
 ```
 app/                        # 백엔드 애플리케이션 메인 패키지
 ├── core/                   # 핵심 비즈니스 로직 및 AI 엔진
@@ -89,7 +89,7 @@ app/                        # 백엔드 애플리케이션 메인 패키지
 │   ├── best_waste_model.pth    # 학습 완료된 AI 가중치(Weights) 파일
 │   └── classes.txt             # AI가 분류하는 10종의 클래스 정보
 └── requirements.txt            # 프로젝트 실행을 위한 라이브러리 목록
-
+```
 설치 및 실행 방법
 환경 설정
 Python 3.9+ 환경이 필요합니다.
