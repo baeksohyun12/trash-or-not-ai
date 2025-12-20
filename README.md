@@ -150,11 +150,11 @@ app/                        # 백엔드 애플리케이션 메인 패키지
 1. 소프트웨어 사양 (Software Requirements)
 Language: Python 3.9 이상 (MobileNetV3 및 PyTorch 호환성 권장 버전)
 
-Framework: FastAPI
+* Framework: FastAPI
 
-ASGI Server: Uvicorn
+* ASGI Server: Uvicorn
 
-AI Engine: PyTorch, Torchvision
+* AI Engine: PyTorch, Torchvision
 
 2. 필수 라이브러리 (Dependencies)
 프로젝트 루트의 requirements.txt를 통해 아래 라이브러리들이 설치되어야 합니다.
@@ -166,9 +166,9 @@ AI Engine: PyTorch, Torchvision
 3. 모델 데이터 경로 설정 (Path Configuration)
 AI 모델이 정상적으로 로드되려면 프로젝트 구조 내에 아래 파일들이 지정된 위치에 있어야 합니다.
 
-가중치 파일: model_data/best_waste_model.pth
+* 가중치 파일: model_data/best_waste_model.pth
 
-클래스 정의: model_data/classes.txt
+* 클래스 정의: model_data/classes.txt
 
 Note: ai_model.py 내부에서 os.path를 통해 자동 경로 탐색을 수행하지만, 실행 시 해당 폴더가 누락되지 않도록 주의해야 합니다.
 
