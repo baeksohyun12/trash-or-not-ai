@@ -14,7 +14,6 @@
 | **AI Status** | 정상 가동 중 | MobileNetV3 Large 기반 |
 
 
-
 ## 프로젝트 소개 (Backend)
 
  **버릴까 말까** 서비스의 핵심 두뇌 역할을 담당합니다. 업로드된 이미지를 실시간으로 분석하는 고성능 AI 추론 엔진을 탑재하고 있으며, 대용량 위치 데이터를 효율적으로 처리하여 사용자에게 가장 가까운 분리수거 정보를 제공합니다.
@@ -28,6 +27,7 @@ AI 기반 객체 분류: MobileNetV3 모델을 활용한 10종의 쓰레기 이�
 
 ### 기술 스택 (Tech Stack)
 **Backend & Server** <br><br>
+
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"> <img src="https://img.shields.io/badge/Uvicorn-4051B5?style=for-the-badge&logo=uvicorn&logoColor=white">
 
 **AI Engine** <br><br>
