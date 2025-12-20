@@ -10,7 +10,7 @@
 4. [핵심 프론트엔드 아키텍처](#핵심-프론트엔드-아키텍처)
 5. [프로젝트 구조(Frontend) 및 설치 및 실행 방법](#프로젝트-구조frontend)
 6. [프로젝트 구조(Backend) 및 설치 및 실행 방법](#프로젝트-구조-backend)
-7. [환경정보](#환경정보)
+7. [환경정보](#환경-정보)
 
 ## 프로젝트 링크 및 서버 정보
 
@@ -176,14 +176,71 @@ app/                        # 백엔드 애플리케이션 메인 패키지
   uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
   ```
 
-## 환경정보
-## 1. 배포 및 구동 환경
-서비스의 실제 실행 위치와 접속 주소입니다.
-* **백엔드 API 서버**: Render.com (https://waste-api-6xd9.onrender.com)
-* **프론트엔드 배포**: GitHub Pages (https://0bini.github.io/my-recycling-project/main.html)
+## 환경 정보
 
-## 2. 외부 API 및 데이터 리소스
-기능 구현을 위해 연동된 외부 자산 정보입니다
-* **AI 추론 모델**: GMobileNetV3 (백엔드 서버 탑재)
-* **지도 서비스**: RKakao Map SDK (v2)
-* **로컬 데이터**: 제주 클린하우스 위치 정보 (data/jeju_cleanhouse.csv)
+### 🛠 Backend Environment & Requirements
+백엔드 서버 가동 및 AI 모델 추론을 위해 아래의 환경 설정이 필요합니다.
+* 환경 설정: **Python 3.9+** 환경이 필요합니다.
+  
+* 서버 실행
+
+  ```bash
+  uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+  ```
+
+1. 소프트웨어 사양 (Software Requirements)
+Language: Python 3.9 이상 (MobileNetV3 및 PyTorch 호환성 권장 버전)
+
+* Framework: FastAPI
+
+* ASGI Server: Uvicorn
+
+* AI Engine: PyTorch, Torchvision
+
+2. 필수 라이브러리 (Dependencies)
+프로젝트 루트의 requirements.txt를 통해 아래 라이브러리들이 설치되어야 합니다.
+
+  ```bash
+  pip install fastapi uvicorn torch torchvision pillow python-multipart
+  ```
+
+3. 모델 데이터 경로 설정 (Path Configuration)
+AI 모델이 정상적으로 로드되려면 프로젝트 구조 내에 아래 파일들이 지정된 위치에 있어야 합니다.
+
+* 가중치 파일: model_data/best_waste_model.pth
+
+* 클래스 정의: model_data/classes.txt
+
+Note: ai_model.py 내부에서 os.path를 통해 자동 경로 탐색을 수행하지만, 실행 시 해당 폴더가 누락되지 않도록 주의해야 합니다.
+
+4. 하드웨어 설정 (Hardware Setting)
+Device: GPU(CUDA) 사용이 가능할 경우 자동으로 GPU를 활용하며, 불가할 경우 CPU로 추론을 수행합니다.
+
+5. 주요 환경 변수 및 제약 조건
+CORS: 현재 모든 Origin(*)에 대해 허용 설정되어 있습니다.
+
+Max Upload Size: 최대 이미지 업로드 용량은 10MB로 제한되어 있습니다.
+
+---
+
+### 🛠 Frontend Environment & Requirements
+
+* 배포 주소: https://0bini.github.io/my-recycling-project/main.html
+
+* 주요 기술 스택: JavaScript (ES6+), HTML5, CSS3
+
+* 사용 라이브러리 및 엔진:
+
+  * Three.js: 3D 지구 로딩 애니메이션 구현
+
+  * Matter.js: 미니게임 물리 엔진 및 충돌 로직 구현
+
+* 연동 API:
+
+  * Kakao Map API: 클린하우스 위치 표시 및 지도 서비스
+
+  * Geolocation API: 사용자 실시간 위치 측정 및 다중 샘플링 보정
+
+* 최적화 기법: TTL 기반 데이터 캐싱, Client-side 파일 유효성 검사, Fail-over 시스템
+
+* 권장 실행 환경: WebGL 및 위치 정보 권한을 지원하는 최신 브라우저 (Chrome 권장)
