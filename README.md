@@ -10,8 +10,8 @@ https://www.notion.so/2a68d2b0e964801ebdc4deaba36f461c?source=copy_link
 
 **버릴까말까** 프로젝트와 관련된 모든 공유 문서가 있는 Notion 링크입니다.
 
-🛠️ 버릴까 말까 - Backend API & AI System
-🚀 백엔드 API 서버 정보
+##🛠️ 버릴까 말까 - Backend API & AI System
+##🚀 백엔드 API 서버 정보
 API 문서(Swagger): https://waste-api-6xd9.onrender.com/docs
 
 AI 모델 가동 상태: 정상 (MobileNetV3 Large 기반)
