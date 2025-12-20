@@ -88,6 +88,7 @@
 해결 방안(Action):
 
 - FastAPI Lifespan(수명주기) 매니저 도입: 요청이 들어올 때마다 모델을 로드하는 것이 아니라, 서버 부팅 시점에 단 한 번만 모델을 로드하여 메모리에 상주시키는 Singleton 패턴 적용.
+
   <img width="473" height="173" alt="image" src="https://github.com/user-attachments/assets/1a71dc64-b9ca-4f91-af6e-ba2409ac8f2c" />
 
 
