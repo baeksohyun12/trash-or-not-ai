@@ -17,7 +17,7 @@
 
 - 학습된 모델의 클래스 인덱스와 서버의 클래스 리스트 순서가 불일치할 잠재적 위험 존재.
 
-* 해결 방안 (Action)
+해결 방안 (Action)
 
 - 동적 경로 할당: os.path.abspath와 os.path.dirname을 활용하여 프로젝트 루트(BASE_DIR)를 동적으로 계산, 실행 위치와 관계없이 model_data 폴더를 정확히 참조하도록 코드 수정.
 
@@ -37,6 +37,8 @@
 해결 방안 (Action):
 
 - 매핑 레이어 도입: 백엔드에서 10가지 AI 클래스를 8가지 UI 카테고리로 변환하는 매핑 로직(icon_mapping) 구현 (예: Scrap → Can, PET → Plastic).
+  <img width="445" height="187" alt="image" src="https://github.com/user-attachments/assets/87e14c3b-7e2d-4eb6-8588-7d958b0e5572" />
+
 
 - API 스키마 확장: 프론트엔드 코드 수정을 최소화하기 위해, API 응답 스키마에 프론트엔드 로직이 요구하는 type 필드(한글명)를 추가하여 전송.
 
@@ -56,6 +58,8 @@
 해결 방안 (Action):
 
 - 전처리 파이프라인 고도화: 단순 리사이즈 방식을 폐기하고, Resize(256) + CenterCrop(224) 방식 도입.
+  <img width="498" height="182" alt="image" src="https://github.com/user-attachments/assets/dfc8c023-7bdf-4f2b-b0c9-df8ab2b4e04e" />
+
 
 - 이미지 비율(Aspect Ratio)을 유지하면서 크기를 줄이고, 이미지의 정중앙(Center)만 잘라내어 배경 노이즈를 제거하고 물체 왜곡을 방지함.
 
@@ -84,6 +88,8 @@
 해결 방안(Action):
 
 - FastAPI Lifespan(수명주기) 매니저 도입: 요청이 들어올 때마다 모델을 로드하는 것이 아니라, 서버 부팅 시점에 단 한 번만 모델을 로드하여 메모리에 상주시키는 Singleton 패턴 적용.
+  <img width="473" height="173" alt="image" src="https://github.com/user-attachments/assets/1a71dc64-b9ca-4f91-af6e-ba2409ac8f2c" />
+
 
 - Pre-warming 전략: 시연 및 테스트 전 헬스 체크(Health Check) API를 호출하여 서버를 미리 활성화 상태(Active)로 전환.
 
@@ -110,6 +116,8 @@
 해결 방안(Action):
 
 - Server-Driven UI 설계: 분리배출 팁, 아이콘 매핑 정보, 카테고리 텍스트 등을 백엔드에서 관리하고 API 응답에 포함하여 전송.
+  <img width="527" height="444" alt="image" src="https://github.com/user-attachments/assets/8881e9cb-4d6b-4191-af25-786c6b3758b3" />
+
 
 - 데이터 구조화: WasteClassifier 클래스와 응답 스키마(Pydantic)를 분리하여 로직 변경이 API 인터페이스에 영향을 주지 않도록 설계.
 
