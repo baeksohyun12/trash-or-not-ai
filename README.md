@@ -1,5 +1,5 @@
-# trash-or-not-ai
-제주대학교 기초웹개발론 5조 "버릴까말까"
+# AI를 이용한 분리수거 도우미 "버릴까말까"
+제주대학교 기초웹개발론 5조 백소현 양문준 고지운 강영빈
 
 ## Notion
 https://www.notion.so/2a68d2b0e964801ebdc4deaba36f461c?source=copy_link
