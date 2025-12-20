@@ -27,7 +27,6 @@ AI 기반 객체 분류: MobileNetV3 모델을 활용한 10종의 쓰레기 이�
 
 ### 기술 스택 (Tech Stack)
 **Backend & Server** <br><br>
-
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"> <img src="https://img.shields.io/badge/Uvicorn-4051B5?style=for-the-badge&logo=uvicorn&logoColor=white">
 
 **AI Engine** <br><br>
