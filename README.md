@@ -24,7 +24,7 @@
 | **AI Status** | 정상 가동 중 | MobileNetV3 Large 기반 |
 | **프론트 배포 URL** | [웹사이트 접속](https://0bini.github.io/my-recycling-project/main.html) | **GitHub Pages 배포** <br> - 실제 사용자가 이용하는 서비스 메인 화면 <br> - 모바일/PC 환경 접속 가능 |
 | **백엔드 배포 URL** | [서버 호스트](https://waste-api-6xd9.onrender.com) | **Render 클라우드 배포** <br> - API 서버의 기본 호스트 주소 <br> - 서버 가동 상태 확인용 |
-|**Figma**|[trash-or-not-Figma](https://www.figma.com/files/team/1568607282944043296/project/493662203/Team-project?fuid=1433665484561556956)|- 브레인스토밍 <br>- 와이어프레임<br>- 디자인, 프로토타입<br>- PT 자료, 일정표<br>- 디자인 시스템, 라이선스 정리
+
 
 ## 프로젝트 소개 (Backend)
 
