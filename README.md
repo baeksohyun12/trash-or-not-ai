@@ -14,9 +14,9 @@ https://www.notion.so/2a68d2b0e964801ebdc4deaba36f461c?source=copy_link
 
 ##백엔드 API 서버 정보
 
-API 문서(Swagger): https://waste-api-6xd9.onrender.com/docs
+###API 문서(Swagger): https://waste-api-6xd9.onrender.com/docs
 
-AI 모델 가동 상태: 정상 (MobileNetV3 Large 기반)
+###AI 모델 가동 상태: 정상 (MobileNetV3 Large 기반)
 
 프로젝트 소개 (Backend)
 ---
