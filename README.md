@@ -135,7 +135,7 @@ app/                        # 백엔드 애플리케이션 메인 패키지
 └── requirements.txt            # 프로젝트 실행을 위한 라이브러리 목록
 ```
 
-## 설치 및 실행 방법
+## 환경 정보
 
 ### 🛠 Backend Environment & Requirements
 백엔드 서버 가동 및 AI 모델 추론을 위해 아래의 환경 설정이 필요합니다.
