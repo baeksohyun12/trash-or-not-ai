@@ -1,6 +1,6 @@
 # 사용자 경험(UX)란 뭘까
 
-Select: Design
+기술블로그 링크 : [사용자 경험(UX)란 뭘까..](https://velog.io/@baeksohyun12/디자인사용자-경험UX란-뭘까)
 
 ### 기존 방식
 
