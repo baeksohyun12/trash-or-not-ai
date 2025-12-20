@@ -9,25 +9,24 @@ https://www.notion.so/2a68d2b0e964801ebdc4deaba36f461c?source=copy_link
 - 작업 트래커 등
 
 **버릴까말까** 프로젝트와 관련된 모든 공유 문서가 있는 Notion 링크입니다.
+## 버릴까 말까 - Backend API & AI System
 
-##버릴까 말까 - Backend API & AI System
+## 백엔드 API 서버 정보
 
-##백엔드 API 서버 정보
+API 문서(Swagger): https://waste-api-6xd9.onrender.com/docs
 
-###API 문서(Swagger): https://waste-api-6xd9.onrender.com/docs
-
-###AI 모델 가동 상태: 정상 (MobileNetV3 Large 기반)
+AI 모델 가동 상태: 정상 (MobileNetV3 Large 기반)
 
 프로젝트 소개 (Backend)
 ---
 "버릴까 말까" 서비스의 핵심 두뇌 역할을 담당합니다. 업로드된 이미지를 실시간으로 분석하는 고성능 AI 추론 엔진을 탑재하고 있으며, 대용량 위치 데이터를 효율적으로 처리하여 사용자에게 가장 가까운 분리수거 정보를 제공합니다.
 
 주요 역할
-AI 기반 객체 분류: MobileNetV3 모델을 활용한 10종의 쓰레기 이미지 판별
+### AI 기반 객체 분류: MobileNetV3 모델을 활용한 10종의 쓰레기 이미지 판별
 
-RESTful API 설계: 프론트엔드와 유연한 연동을 위한 FastAPI 기반 API 구축
+### RESTful API 설계: 프론트엔드와 유연한 연동을 위한 FastAPI 기반 API 구축
 
-데이터 정합성 및 예외 처리: 이미지 규격 검증 및 서버 사이드 보안 로직 적용
+### 데이터 정합성 및 예외 처리: 이미지 규격 검증 및 서버 사이드 보안 로직 적용
 
 기술 스택 (Tech Stack)
 ---
@@ -42,7 +41,7 @@ DevOps & Tools
 
 핵심 백엔드 아키텍처
 ---
-1. 실시간 AI 추론 파이프라인 (MobileNetV3)
+### 1. 실시간 AI 추론 파이프라인 (MobileNetV3)
 
 사용자가 업로드한 고해상도 이미지를 서버 메모리에서 즉시 처리하여 분석 결과를 반환합니다.
 
@@ -50,7 +49,7 @@ DevOps & Tools
 
 추론 최적화: eval() 모드와 torch.no_grad()를 사용하여 불필요한 연산을 제거하고 응답 속도를 향상시켰습니다.
 
-2. 강력한 이미지 유효성 검증
+### 2. 강력한 이미지 유효성 검증
 
 악의적인 요청이나 대용량 파일로부터 서버를 보호하기 위해 다중 보안 계층을 구축했습니다.
 
@@ -60,13 +59,12 @@ Payload 제한: MAX_FILE_SIZE (10MB) 설정을 통해 서버 부하를 방지하
 
 API 명세 (API Specification)기능MethodPath설명이미지 분석POST/api/predictAI를 통한 쓰레기 분류 및 배출 팁 반환서버 상태GET/API 서버 가동 여부 확인
 
-[AI 분석 상세 응답 구조]
+## [AI 분석 상세 응답 구조]
 AI 분석 시 프론트엔드 아이콘 매핑을 고려하여 Scrap → Can, PET → Plastic으로 데이터 변환 후 전달합니다.
 
-Response 예시:
-
-JSON
+### Response 예시:
 ```
+JSON
 {
   "category": "Can",
   "is_dirty": false,
@@ -91,18 +89,19 @@ app/                        # 백엔드 애플리케이션 메인 패키지
 │   └── classes.txt             # AI가 분류하는 10종의 클래스 정보
 └── requirements.txt            # 프로젝트 실행을 위한 라이브러리 목록
 ```
-설치 및 실행 방법
-환경 설정
+## 설치 및 실행 방법
+### 환경 설정
 Python 3.9+ 환경이 필요합니다.
 
-필수 라이브러리 설치:
-
+### 필수 라이브러리 설치:
+```
 Bash
-
 pip install fastapi uvicorn torch torchvision pillow python-multipart
-서버 실행
+```
+### 서버 실행
+```
 Bash
-
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+```
 
 
