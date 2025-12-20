@@ -34,4 +34,4 @@
 
 ### 3. 기타 API 정보
 * **서버 상태 확인:** `GET /`
-* **Swagger URL:** `http://여기에_서버_IP_작성:8000/docs`
+* **Swagger URL:** `https://waste-api-6xd9.onrender.com/docs`
