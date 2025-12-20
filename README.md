@@ -10,16 +10,16 @@ https://www.notion.so/2a68d2b0e964801ebdc4deaba36f461c?source=copy_link
 
 **버릴까말까** 프로젝트와 관련된 모든 공유 문서가 있는 Notion 링크입니다.
 
-🛠️ 버릴까 말까 - Backend API & AI System
+##버릴까 말까 - Backend API & AI System
 
-🚀 백엔드 API 서버 정보
+##백엔드 API 서버 정보
 
 API 문서(Swagger): https://waste-api-6xd9.onrender.com/docs
 
 AI 모델 가동 상태: 정상 (MobileNetV3 Large 기반)
 
 프로젝트 소개 (Backend)
-
+---
 "버릴까 말까" 서비스의 핵심 두뇌 역할을 담당합니다. 업로드된 이미지를 실시간으로 분석하는 고성능 AI 추론 엔진을 탑재하고 있으며, 대용량 위치 데이터를 효율적으로 처리하여 사용자에게 가장 가까운 분리수거 정보를 제공합니다.
 
 주요 역할
@@ -30,6 +30,7 @@ RESTful API 설계: 프론트엔드와 유연한 연동을 위한 FastAPI 기반
 데이터 정합성 및 예외 처리: 이미지 규격 검증 및 서버 사이드 보안 로직 적용
 
 기술 스택 (Tech Stack)
+---
 Backend & Server
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"> <img src="https://img.shields.io/badge/Uvicorn-4051B5?style=for-the-badge&logo=uvicorn&logoColor=white">
 
@@ -40,7 +41,7 @@ DevOps & Tools
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">
 
 핵심 백엔드 아키텍처
-
+---
 1. 실시간 AI 추론 파이프라인 (MobileNetV3)
 
 사용자가 업로드한 고해상도 이미지를 서버 메모리에서 즉시 처리하여 분석 결과를 반환합니다.
