@@ -12,6 +12,8 @@
 | **Notion** | [trash-or-not-ai](https://www.notion.so/2a68d2b0e964801ebdc4deaba36f461c?source=copy_link) | **버릴까말까** 프로젝트와 관련된 모든 공유 문서 존재 <br> - 이제까지 진행한 회의록과 피드백을 정리한 문서 허브 <br> - 기능정의서와 API 명세서 <br> - BE, FE GitHub 주소, Figma 링크 <br> - 작업 트래커 등 |
 | **API Docs** | [Swagger UI 바로가기](https://waste-api-6xd9.onrender.com/docs) | 실시간 API 테스트 가능 |
 | **AI Status** | 정상 가동 중 | MobileNetV3 Large 기반 |
+| **프론트 배포 URL** | [웹사이트 접속](https://0bini.github.io/my-recycling-project/main.html) | **GitHub Pages 배포** <br> - 실제 사용자가 이용하는 서비스 메인 화면 <br> - 모바일/PC 환경 접속 가능 |
+| **백엔드 배포 URL** | [서버 호스트](https://waste-api-6xd9.onrender.com) | **Render 클라우드 배포** <br> - API 서버의 기본 호스트 주소 <br> - 서버 가동 상태 확인용 |
 
 
 ## 프로젝트 소개 (Backend)
