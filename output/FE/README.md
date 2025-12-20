@@ -116,7 +116,6 @@
 <summary>코드 보기</summary>
 
 ```javascript
-// --- 공통 기능 ---
 function triggerFileUpload() { if (fileInput) fileInput.click(); }
 function handleFileSelect(e) {
     const file = e.target.files[0];
